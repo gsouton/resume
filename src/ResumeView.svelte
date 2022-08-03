@@ -3,11 +3,11 @@
     import Header from "./Header.svelte";
     import Body from "./Body.svelte";
 
-    let name = "Full Name";
-    let description = "Current position or field of study";
+    let name = "Gilles Souton";
+    let description = "Computer Science student";
 </script>
 
-<div id="resume-view" class="col-span-full mx-auto relative font-roboto w-[21cm] h-[29.7cm] border">
+<div id="resume-view" class="col-span-full relative font-roboto w-[21cm] h-[29.7cm] border">
     <Header {name} {description}/>
     <Body />
     <Footer />

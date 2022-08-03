@@ -1,4 +1,7 @@
 <script lang="ts">
+    import Education from "./Education";
+    import EducationList from "./EducationList.svelte";
+
     import Experience from "./Experience";
 
     import ExperienceList from "./ExperienceList.svelte";
@@ -8,21 +11,13 @@
     import SkillList from "./SkillList.svelte";
     import TimeSpan from "./TimeSpan";
 
-    let advancedSkills = ["C", "Git", "Java", "Unix", "Python"];
-    let intermediateSkills = [
-        "Rust",
-        "OpenMP",
-        "C++",
-        "C#",
-        "Spring",
-        "Vue",
-        "SQL",
-    ];
+    let advancedSkills = ["C", "C#", "Git", "Java", "Unix", "Python"];
+    let intermediateSkills = ["Rust", "OpenMP", "C++", "Spring", "Vue", "SQL"];
     let basicSkills = ["Ocaml", "Docker", "Svelte", "React"];
 
     let languages: LanguageSkill[] = [
         { lang: "English", level: "C1" },
-        { lang: "Spanish", level: "B2" },
+        { lang: "French", level: "C2" },
         { lang: "German", level: "A2" },
     ];
 
@@ -42,39 +37,38 @@
             "Html",
             "Css",
         ]),
-        new Project(
-            "Abelian Sandpile",
-            "Simulation of abelian sandpile using OpenMP and OpenCL",
-            ["C, Python"]
-        ),
-        new Project("Game of life", "Simulation of abelian sandpile", [
-            "C, Python",
+        new Project("Abelian Sandpile", "Simulation of abelian sandpile", [
+            "C",
+            "OpenMP",
         ]),
-        new Project("Game", "Tic tac toe", ["Go"]),
     ];
 
     let experiences = [
         new Experience(
-            new TimeSpan("September 2021", "present"),
-            "Degree or work experience",
-            "Location"
+            new TimeSpan("August 2021", "present"),
+            "Software Developer",
+            "Tentamus Group - Germany, Berlin",
+            "Working as a software developer to implement new features and improve existing workflows"
         ),
-        new Experience(
-            new TimeSpan("September 2018", "2021"),
-            "Degree or work experience",
-            "Location"
-        ),
+    ];
 
-        new Experience(
-            new TimeSpan("September 2017", "2018"),
-            "Degree or work experience",
-            "Location"
+    let educations = [
+        new Education(
+            new TimeSpan("August 2021", "present"),
+            "Master of software engineering",
+            "University of Bordeaux - France"
+        ),
+        new Education(
+            new TimeSpan("September 2018", "2021"),
+            "Bachelor of Computer Science",
+            "University of Bordeaux - France"
         ),
     ];
 </script>
 
-<div id="resume-body" class="px-14 py-1">
+<div id="resume-body" class="px-14">
     <ExperienceList {experiences} />
+    <EducationList {educations} />
     <SkillList
         {advancedSkills}
         {intermediateSkills}

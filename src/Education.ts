@@ -1,18 +1,16 @@
 import TimeSpan from "./TimeSpan";
 
-class Experience {
+class Education {
     timeSpan: TimeSpan;
     position: string;
     location: string;
-    description: string;
 
-    constructor(timeSpan: TimeSpan, position: string, location: string, description: string){
+    constructor(timeSpan: TimeSpan, position: string, location: string){
         this.timeSpan = timeSpan;
         this.position = position;
         this.location = location;
-        this.description = description;
     }
 
 }
 
-export default Experience;
+export default Education;

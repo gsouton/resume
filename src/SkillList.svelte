@@ -7,7 +7,7 @@
     export let languages: LanguageSkill[];
 </script>
 
-<div class="my-3 w-full">
+<div class="my-2 w-full">
     <h1 class="text-lg font-bold col-span-full">Skills</h1>
     <div class="pl-4">
         <h2 class="py-1 text-md font-bold">Computer Science:</h2>
@@ -35,9 +35,9 @@
             </ul>
         </div>
 
-        <div class="py-1 grid gap-1 grid-cols-3">
+        <div class="py-1">
             <h2 class="text-md font-bold ">Languages:</h2>
-            <ul id="languages" class="flex gap-4 col-span-2">
+            <ul id="languages" class="pl-4 py-1 flex gap-4 col-span-2">
                 {#each languages as { lang, level }}
                     <li>{lang} ({level})</li>
                 {/each}
