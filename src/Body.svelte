@@ -48,14 +48,14 @@
             new TimeSpan("August 2021", "present"),
             "Software Developer",
             "Tentamus Group - Germany, Berlin",
-            "Working as a software developer to implement new features and improve existing workflows"
+            "My role is to implement new features and improve existing workflows.\nI mainly use Java, SQL and Python.",
         ),
     ];
 
     let educations = [
         new Education(
             new TimeSpan("August 2021", "present"),
-            "Master of software engineering",
+            "Master of Software Engineering",
             "University of Bordeaux - France"
         ),
         new Education(

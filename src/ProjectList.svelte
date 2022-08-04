@@ -10,7 +10,14 @@
             <li class="font-bold text-slate col-span-4">{project.name}</li>
             <li class="col-span-8">
                 <h2 class="">{project.description}</h2>
-                <h3 class="text-light-blue">{project.techStack}</h3>
+
+                {#each project.techStack as tech, i}
+                    {#if i < project.techStack.length - 1}
+                        <span class="text-light-blue">{tech}, </span>
+                    {:else}
+                        <span class="text-light-blue">{tech}</span>
+                    {/if}
+                {/each}
             </li>
             {#if i < projects.length - 1}
                 <hr class="col-span-full  bg-blue-gray" />

@@ -7,8 +7,11 @@
     let description = "Computer Science student";
 </script>
 
-<div id="resume-view" class="col-span-full relative font-roboto w-[21cm] h-[29.7cm] border">
-    <Header {name} {description}/>
+<div
+    id="resume-view"
+    class="col-span-full m-auto relative font-roboto w-[21cm] h-[29.7cm] border"
+>
+    <Header {name} {description} />
     <Body />
     <Footer />
 </div>
